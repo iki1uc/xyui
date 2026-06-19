@@ -1,1 +1,32 @@
+ITEM: XYUI OPERATOR
+TYPE: operator
+VERSION: neu-1
+
+# PURPOSE
+Operator-Definition für xyui.
+
+# OPERATORS
+? = input
+! = output
+& = state
+
+# STATES
+&idle
+&active
+&error
+&passthrough
+
+# FLOW
+?raw_input → &active
+&active → !processed
+&error → !err
+&passthrough → !raw_out
+
+# TEST CASES
+?A → !A
+?B → !B
+?0 → !0
+?* → !*
+
+END
 
