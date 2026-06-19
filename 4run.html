@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4RUN – xyui</title>
+
+<style>
+    body {
+        background: #000;
+        color: #0f0;
+        font-family: Consolas, monospace;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .title {
+        font-size: 32px;
+        color: #0f0;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #0f0;
+    }
+    .item-block {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #0f0;
+        border-radius: 8px;
+        background: rgba(0,255,0,0.05);
+    }
+    .filename {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #9f9;
+    }
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        color: #0f0;
+    }
+</style>
+
+<script>
+async function loadItem(path) {
+    try {
+        const res = await fetch(path);
+        return await res.text();
+    } catch (e) {
+        return "FEHLER: Datei konnte nicht geladen werden.";
+    }
+}
+
+async function run() {
+    const files = [
+        "items/station-01.bench.item",
+        "items/station-02.bench.item",
+        "items/xyui-bench-plan.item",
+        "items/xyui-operator.item"
+    ];
+
+    const container = document.getElementById("content");
+
+    for (const file of files) {
+        const block = document.createElement("div");
+        block.className = "item-block";
+
+        const title = document.createElement("div");
+        title.className = "filename";
+        title.textContent = file;
+
+        const pre = document.createElement("pre");
+        pre.textContent = await loadItem(file);
+
+        block.appendChild(title);
+        block.appendChild(pre);
+        container.appendChild(block);
+    }
+}
+
+window.onload = run;
+</script>
+
+</head>
+<body>
+    <div class="title">4RUN – xyui</div>
+    <div id="content"></div>
+</body>
+</html>
 
