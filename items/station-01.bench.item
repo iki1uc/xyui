@@ -1,1 +1,26 @@
+ITEM: XYUI STATION 01
+TYPE: bench
+VERSION: neu-1
 
+# PURPOSE
+Grundstation für rohe Eingaben.
+
+# INPUTS
+? raw_input
+? raw_flag
+? raw_mode
+
+# OUTPUTS
+! normalized
+! flag_out
+! passthrough
+
+# RULES
+& raw_input → normalized
+& raw_flag → flag_out
+& raw_mode → passthrough
+& keine Interpretation
+& keine Logik
+& RAW bleibt RAW
+
+END
