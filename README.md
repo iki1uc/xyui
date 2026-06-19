@@ -1,15 +1,12 @@
-# RESPO 34 – xyui
+# xyui – RESPO 34
 
-Startpunkt der RESPO‑Reihe 34–40.
+Serie: 30 / 34–40  
+Position: 1  
+Status: online
 
-Live: https://iki1uc.github.io/xyui/
-
-## Struktur
+Inhalt:
 - index.html
-- .github/workflows/static.yml
-- .github/workflows/deploy.yml
+- 4run.html
+- /items
 
-## Zweck
-RESPO 34 trägt nur Name + Position.  
-Keine Funktion, keine Logik.
-
+Dies ist ein Respo der Serie 34–40.
