@@ -1,1 +1,30 @@
+ITEM: XYUI BENCH PLAN
+TYPE: bench
+VERSION: neu-1
+
+# PURPOSE
+Definiert Testfälle für xyui.
+
+# INPUTS
+? test_raw_01
+? test_raw_02
+? test_raw_03
+? test_flag
+? test_mode
+
+# OUTPUTS
+! out_01
+! out_02
+! out_03
+! out_flag
+! out_mode
+
+# RULES
+& test_raw_01 → out_01
+& test_raw_02 → out_02
+& test_raw_03 → out_03
+& test_flag → out_flag
+& test_mode → out_mode
+
+END
 
