@@ -1,1 +1,26 @@
+ITEM: XYUI STATION 02
+TYPE: bench
+VERSION: neu-1
+
+# PURPOSE
+Zweite Stufe. Nimmt strukturierte Werte aus Station 01.
+
+# INPUTS
+? normalized
+? flag_out
+? passthrough
+
+# OUTPUTS
+! processed
+! status
+! passthrough_out
+
+# RULES
+& normalized → processed
+& flag_out → status
+& passthrough → passthrough_out
+& keine Filter
+& keine Korrektur
+
+END
 
