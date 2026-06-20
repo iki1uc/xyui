@@ -16,6 +16,22 @@
             font-size: 48px;
             letter-spacing: 4px;
         }
+        #respo {
+            margin-top: 40px;
+        }
+        .cmd {
+            background: #222;
+            color: #eaeaea;
+            border: 1px solid #444;
+            padding: 10px 20px;
+            margin: 6px;
+            cursor: pointer;
+        }
+        #log {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
         .runlink {
             position: fixed;
             bottom: 12px;
@@ -31,9 +47,24 @@
     </style>
 </head>
 <body>
+
     <div class="box">xyui</div>
+
+    <!-- RESPO für CALC -->
+    <div id="respo">
+        <button class="cmd" data-cmd="Start">Start</button>
+        <button class="cmd" data-cmd="Stop">Stop</button>
+        <button class="cmd" data-cmd="Weiter">Weiter</button>
+        <button class="cmd" data-cmd="Zurueck">Zurueck</button>
+    </div>
+
+    <!-- CALC‑Output -->
+    <div id="log"></div>
 
     <!-- Minimaler 4run-Hook -->
     <a href="4run.html" class="runlink">4RUN</a>
+
+    <!-- CALC-Kern -->
+    <script src="respo.js"></script>
 </body>
 </html>
